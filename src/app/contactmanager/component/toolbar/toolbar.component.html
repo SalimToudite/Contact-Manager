@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <button mat-button class="sidenav-toggle" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Contact Manager</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openAddContactDialog()">
+      <mat-icon>add</mat-icon>
+      <span>New Contact</span>
+    </button>
+    <button mat-menu-item (click)="toggleTheme.emit()">
+      <mat-icon>dark_mode</mat-icon>
+      <span>Toggle theme</span>
+    </button>
+    <button mat-menu-item (click)="toggleDirection.emit()">
+      <mat-icon>compare_arrows</mat-icon>
+      <span>Toggle theme</span>
+    </button>
+
+  </mat-menu>
+</mat-toolbar>
